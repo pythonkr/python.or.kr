@@ -1,0 +1,32 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="./static/style.css">
+<title>Welcome to PythonKorea! — PythonKorea</title>
+<body>
+  <header>
+    <h1>PythonKorea</h1>
+    <nav>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Welcome</a></li>
+        
+          <li><a href="./blog/">Blog</a></li>
+        
+          <li><a href="./projects/">Projects</a></li>
+        
+          <li><a href="./about/">About</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+  <div class="page">
+    
+  <h2>Welcome to PythonKorea!</h2>
+  <p>사단법인 파이썬사용자모임의 홈페이지 입니다.
+조직, 총회, 예산 등의 내용등을 공유합니다.</p>
+
+
+  </div>
+  <footer>
+    &copy; Copyright 2016 by ParkMinwoo.
+  </footer>
+</body>
