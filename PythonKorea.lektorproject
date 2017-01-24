@@ -1,5 +1,0 @@
-[project]
-name = PythonKorea
-
-[servers.ghpages]
-target = ghpages+https://pythonkr/foundation?cname=foundation.pycon.kr
