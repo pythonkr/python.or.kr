@@ -30,7 +30,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
@@ -38,5 +38,18 @@ RELATIVE_URLS = True
 STATIC_PATHS = ['images', ]
 
 THEME           = 'themes/foundation'
+
+INDEX_SAVE_AS = 'news/index.html'
+
+PAGE_URL = '{pageurl}/'
+PAGE_SAVE_AS = '{pageurl}/index.html'
+
+ARTICLE_PATHS = ['news']
+ARTICLE_URL = 'news/{date:%Y}/{slug}/'
+ARTICLE_SAVE_AS = 'news/{date:%Y}/{slug}/index.html'
+
+DATE_FORMATS = {
+    'en': '%Y-%m-%d',
+}
 
 CURRENTYEAR = date.today().year

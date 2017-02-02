@@ -1,0 +1,212 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+html {
+    position: relative;
+    min-height: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+body {
+    margin-bottom: 80px;
+    color: #6d6d6d;
+    font-family: 'Open Sans', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Roboto', 'Open Sans', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+}
+
+a {
+    color: #9c8ff7;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #645d9a;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.navbar-white {
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 8px;
+}
+
+.navbar-brand img {
+    width: 36px;
+    margin: 2px 0;
+}
+
+.navbar-brand span {
+    color: #777;
+    font-size: 1rem;
+    margin-left: 6px;
+}
+
+.navbar button {
+    margin-top: 3px;
+    color: #444;
+}
+
+ul.navbar-nav {
+    margin-top: 4px;
+}
+
+.navbar-nav .nav-item+.nav-item {
+    margin-left: 2rem;
+}
+
+a.nav-link {
+    color: #777;
+}
+
+a.nav-link:hover {
+    color: #9c8ff7;
+}
+
+.active a.nav-link {
+    font-weight: 600;
+    color: #9c8ff7;
+}
+
+.navbar-toggleable-xs {
+  width: 100%;
+}
+
+main {
+    padding: 45px 1rem 70px 1rem;
+    min-height: 100%;
+}
+
+article img {
+    max-width: 100%;
+    margin: 15px 0;
+}
+
+article p {
+    margin-bottom: 1.5rem;
+    line-height: 1.9rem;
+}
+
+article p:last-child {
+    margin-bottom: 0;
+}
+
+.news-list {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.news-list:last-of-type {
+    border-bottom: none;
+}
+
+.page h1 {
+    color: #2d2a2f;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: 3.5rem;
+    margin-top: 80px;
+}
+
+.page h1:first-child {
+    margin-top: 0;
+}
+
+.page h2 {
+    color: #4c4850;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+.page ul, .page ol {
+    padding-left: 20px;
+    line-height: 2rem;
+}
+
+h3.article-date {
+    margin-top: 40px;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+h2.article-title {
+    font-family: 'Roboto', 'Open Sans', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 1.7rem;
+}
+
+.news h1 {
+    margin-bottom: 10px;
+}
+
+.news h3.article-date {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.article-content h1, .article-content h2, .article-content h3 {
+    color: #2d2a2f;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.paginator {
+    border-top: 1px solid #ddd;
+}
+
+ul.pagination {
+    line-height: initial;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.paginator .page-num:hover, .paginator .disabled:hover {
+    background-color: white;
+}
+
+.paginator .disabled span {
+    color: #aaa;
+}
+
+.page-link {
+    color: #9c8ff7;
+}
+
+footer {
+    font-size: 0.85rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #999;
+    padding: 40px 1rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 575px){
+
+    ul.navbar-nav {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item+.nav-item {
+        margin-left: 0;
+    }
+
+    .page h1 {
+        font-size: 1.9rem;
+        line-height: 3.2rem;
+    }
+}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}소식 | {{ SITENAME }}{% endblock %}
+{% block news_active %}active{% endblock %}
+
+{% block content %}
+<main class="page">
+  <section class="content">
+    <div class="container">
+      <article class="news">
+        <h1>{{ article.title }}</h1>
+        <h3 class="article-date">{{ article.locale_date }}</h3>
+        <div class="article-content">
+          {{ article.content }}
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+{% endblock %}

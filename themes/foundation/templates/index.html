@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}소식 | {{ SITENAME }}{% endblock %}
+{% block news_active %}active{% endblock %}
+
+{% block content %}
+<main class="page">
+  <section class="content">
+    <div class="container">
+      <h1>소식</h1>
+      {% for article in articles_page.object_list %}
+        <article class="news-list">
+          <h3 class="article-date">{{ article.locale_date }}</h3>
+          <h2 class="article-title"><a href="{{ SITEURL }}/{{ article.url }}" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+          <p>{{ article.summary }}</p>
+        </article>
+      {% endfor %}
+
+      {% if articles_page.has_other_pages() %}
+        {% include 'pagination.html' %}
+      {% endif %}
+    </div>
+  </section>
+</main>
+{% endblock content %}
