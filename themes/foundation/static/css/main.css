@@ -10,7 +10,7 @@ html {
 
 body {
     margin-bottom: 80px;
-    color: #6d6d6d;
+    color: #555;
     font-family: 'Open Sans', 'Helvetica Neue, Helvetica, Arial', sans-serif;
 }
 
@@ -42,7 +42,7 @@ a:hover {
 }
 
 .navbar-brand span {
-    color: #777;
+    color: #555;
     font-size: 1rem;
     margin-left: 6px;
 }
@@ -61,7 +61,7 @@ ul.navbar-nav {
 }
 
 a.nav-link {
-    color: #777;
+    color: #555;
 }
 
 a.nav-link:hover {
@@ -187,7 +187,7 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    color: #999;
+    color: #888;
     padding: 40px 1rem;
 }
 
