@@ -2,71 +2,101 @@
 
 
 
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Python Asia - PK HOME</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.5/cdn.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
-        body {
-            padding-top: 40px;
-            display: flex;
-            flex-direction: column;
-        }
-        main {
-            flex: 1;
-        }
-        footer {
-            background-color: #f8f9fa;
-            margin-bottom: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>파이썬 한국 사용자 모임</title>
+  
+
+<link rel="stylesheet" href="/static/css/dist/styles.css?v=1748681221">
+
+
+
+
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="/">
-                <img src="/static/pao/01-Main2.png" alt="Python Asia Organization Logo"
-                    height="80"/>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    
-                        <li class="nav-item"><a class="nav-link" href="/about/">소개</a></li>
-                    
-                </ul>
-            </div>
+<body class="bg-white min-h-screen flex flex-col">
+  <!-- 내비게이션 -->
+  <nav class="bg-white border-b">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <!-- 로고 + 텍스트 타이틀 -->
+        <div class="flex flex-row items-center space-x-4 w-auto">
+          <a class="navbar-brand" href="/">
+            <img class="h-12 mx-auto md:mx-0" src="/static/pythonkr/pythonkr-badge.png" alt="Python Korea Logo"/>
+          </a>
+          <h1 class="text-xl font-bold text-gray-800 mt-2 md:mt-0 text-center md:text-left">
+            파이썬 한국 사용자 모임
+          </h1>
         </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="container mt-5 pt-5">
-        
-    <p data-block-key="hvcbw">dddd</p>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="sponsor-footer mt-5">
-        <div class="container text-center">
-            <h4 class="text-center mb-4">Our Sponsors</h4>
-            <div class="row justify-content-center">
-                
-            </div>
+        <!-- 내비게이션 -->
+        <div class="hidden md:flex space-x-4">
+          
+          <a class="text-gray-600 hover:text-gray-800" href="/about/">About</a>
+          
+          <a class="text-gray-600 hover:text-gray-800" href="/activity/">Activity</a>
+          
+          <a class="text-gray-600 hover:text-gray-800" href="/support/">Support</a>
+          
         </div>
-        
-    </footer>
-</body>
+        <!-- 모바일 메뉴 버튼 -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- 모바일 메뉴 -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+      
+      <a class="block py-2 text-gray-600 hover:bg-gray-200" href="/about/">About</a>
+      
+      <a class="block py-2 text-gray-600 hover:bg-gray-200" href="/activity/">Activity</a>
+      
+      <a class="block py-2 text-gray-600 hover:bg-gray-200" href="/support/">Support</a>
+      
+    </div>
+  </nav>
+
+  <!-- 메인 -->
+  <main class="flex-grow container mx-auto px-4 py-8">
+    <div class="prose">
+      <p data-block-key="1xdb6">파이썬 한국 사용자 모임</p>
+    </div>
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="bg-white border-t">
+    <div class="container mx-auto px-4 py-8">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+        <!-- 로고 및 설명 -->
+        <div>
+          <h2 class="text-lg font-semibold text-gray-800">Python Korea</h2>
+          <p class="text-sm text-gray-500 mt-1">
+            파이썬 한국 사용자 모임은 파이썬을 사용하는 모든 사람들을 위한 열린 커뮤니티입니다.
+          </p>
+          <p class="mt-6 pt-4 text-sm text-gray-400">
+            © 2025 Python Korea. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+<script src="/static/django-browser-reload/reload-listener.js" data-worker-script-path="/static/django-browser-reload/reload-worker.js" data-events-path="/__reload__/events/" defer></script></body>
 </html>
+
