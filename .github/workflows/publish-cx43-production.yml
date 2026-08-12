@@ -1,0 +1,153 @@
+name: PythonKR - Publish static HTML to production
+
+run-name: "Static HTML: publish www.python.or.kr from cx43 by @${{ github.actor }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: Type "publish static html www.python.or.kr"
+        required: true
+        type: string
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build_and_publish_static_html:
+    if: >-
+      github.ref == 'refs/heads/master' &&
+      github.actor == 'darjeeling' &&
+      github.triggering_actor == 'darjeeling' &&
+      inputs.confirm == 'publish static html www.python.or.kr'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment:
+      name: production
+      url: https://www.python.or.kr/
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Request cx43 production static HTML build
+        env:
+          TOKEN: ${{ secrets.STATIC_PUBLISHER_PRODUCTION_TOKEN }}
+        run: |
+          set -euo pipefail
+          payload=$(jq -nc \
+            --arg repository "$GITHUB_REPOSITORY" \
+            --arg run_id "$GITHUB_RUN_ID" \
+            --arg run_attempt "$GITHUB_RUN_ATTEMPT" \
+            '{repository:$repository,run_id:$run_id,run_attempt:$run_attempt}')
+          curl --fail-with-body --silent --show-error \
+            -H "Authorization: Bearer ${TOKEN}" \
+            -H 'Content-Type: application/json' \
+            --data "$payload" \
+            https://cx43.iz4u.net/hooks/static/publish/pythonkr/production
+
+      - name: Download and verify artifact
+        env:
+          TOKEN: ${{ secrets.STATIC_PUBLISHER_PRODUCTION_TOKEN }}
+        run: |
+          set -euo pipefail
+          base_url="https://cx43.iz4u.net/hooks/static"
+          run_key="${GITHUB_RUN_ID}/${GITHUB_RUN_ATTEMPT}"
+          status_url="${base_url}/runs/pythonkr/production/${run_key}"
+          artifact_url="${base_url}/artifacts/pythonkr/production/${run_key}"
+          status=queued
+          for _ in $(seq 1 360); do
+            status=$(curl --fail-with-body --silent --show-error \
+              -H "Authorization: Bearer ${TOKEN}" "$status_url" | jq -r .status)
+            case "$status" in
+              ready) break ;;
+              build_failed) exit 1 ;;
+              *) sleep 5 ;;
+            esac
+          done
+          test "$status" = ready
+          curl --fail-with-body --silent --show-error \
+            -H "Authorization: Bearer ${TOKEN}" \
+            --output artifact.tar.gz.tmp "$artifact_url"
+          mv artifact.tar.gz.tmp artifact.tar.gz
+          python - artifact.tar.gz site <<'PY'
+          import pathlib
+          import sys
+          import tarfile
+
+          destination = pathlib.Path(sys.argv[2])
+          destination.mkdir()
+          with tarfile.open(sys.argv[1], "r:gz") as archive:
+              members = archive.getmembers()
+              if any(not (member.isfile() or member.isdir()) for member in members):
+                  raise SystemExit("artifact contains a non-file member")
+              archive.extractall(destination, members=members, filter="data")
+          PY
+          test -s site/index.html
+          test -s site/sitemap.xml
+          printf 'User-agent: *\nAllow: /\nSitemap: https://www.python.or.kr/sitemap.xml' \
+            > "$RUNNER_TEMP/expected-robots.txt"
+          cmp -s "$RUNNER_TEMP/expected-robots.txt" site/robots.txt
+          test ! -e site/CNAME
+          test ! -e site/tr
+          test ! -e site/rssitem-crawling
+          test ! -e site/media/tr
+          test ! -e site/media/rssitem-crawling
+          test "$(find site -name '*.html' -type f -size 0 | wc -l)" -eq 0
+          python - https://www.python.or.kr site/sitemap.xml <<'PY'
+          import sys
+          from urllib.parse import urlsplit
+          from xml.etree import ElementTree
+
+          origin = urlsplit(sys.argv[1])
+          locations = [
+              (element.text or "").strip()
+              for element in ElementTree.parse(sys.argv[2]).iter()
+              if element.tag.rsplit("}", 1)[-1] == "loc"
+          ]
+          if not locations:
+              raise SystemExit("sitemap has no loc entries")
+          for location in locations:
+              parsed = urlsplit(location)
+              if (parsed.scheme, parsed.netloc) != (origin.scheme, origin.netloc):
+                  raise SystemExit(f"non-canonical sitemap location: {location}")
+          PY
+          if grep -RIEq \
+            '(pao|pk)-static-staging\.iz4u\.net|(pao|pk)-staging\.iz4u\.net' site; then
+            exit 1
+          fi
+
+      - name: Update production static HTML tree
+        run: |
+          set -euo pipefail
+          rsync -a --delete site/ web/
+          git config user.name static-publisher
+          git config user.email static-publisher@iz4u.net
+          git add --all web
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish PythonKR production from ${GITHUB_SHA}"
+            git push origin HEAD:master
+          fi
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/
+
+  deploy_static_html_to_pages:
+    needs: build_and_publish_static_html
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Deploy static HTML to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
