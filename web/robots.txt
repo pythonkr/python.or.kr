@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.python.or.kr/sitemap.xml
