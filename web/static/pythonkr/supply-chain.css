@@ -1,0 +1,41 @@
+/* Supply chain security theme: all rules are scoped to this CMS theme. */
+.theme-supply-chain{--security-navy:#081625;--security-cyan:#5fe4fa;background:#fafaf9;color:#102135}
+.theme-supply-chain .conference-nav{background:#081625f2;color:#f4f7fb;border-color:#274153;padding:20px 6vw}
+.theme-supply-chain .brand{font-size:1.25rem;letter-spacing:-.03em}
+.theme-supply-chain .language-switch{border-color:#365369}
+.theme-supply-chain .language-switch [aria-current=page]{color:#5fe4fa}
+.theme-supply-chain .hero{position:relative;grid-template-columns:1fr 1.1fr;background:#081625;color:#fff;border-color:#274153;min-height:680px;isolation:isolate}
+.theme-supply-chain .hero-copy{padding:85px 0 80px 6vw;z-index:1}
+.theme-supply-chain .hero h1{font-size:clamp(2.8rem,5.2vw,5.6rem);line-height:1.18;letter-spacing:-.045em;word-break:keep-all;overflow-wrap:anywhere;max-width:520px}
+.theme-supply-chain .hero .eyebrow{color:#91c7e7;letter-spacing:.22em;font-size:.7rem;margin-bottom:32px}
+.theme-supply-chain .hero .intro{color:#e3eaf3;font-size:1.1rem;max-width:490px}
+.theme-supply-chain .event-meta{color:#c7d6e6;margin:35px 0;line-height:1.7}
+.theme-supply-chain .event-meta strong{font-size:2.2rem;color:#fff;letter-spacing:.02em}
+.theme-supply-chain .joint-organizers{display:block;margin-top:24px;font-size:.9rem;max-width:470px}
+.theme-supply-chain .button{background:transparent;color:#7ee9fb!important;border:1px solid #5fe4fa;border-radius:40px;padding:12px 24px}
+.theme-supply-chain .hero-art{background:#081625;min-height:0;align-self:stretch}
+.theme-supply-chain .hero-art>img{object-fit:contain;width:100%;height:100%;mix-blend-mode:lighten}
+.theme-supply-chain .security-focus{padding:65px 6vw 75px}
+.theme-supply-chain .security-focus .eyebrow{color:#34718e}
+.theme-supply-chain .focus-heading{display:grid;grid-template-columns:1.4fr 1fr;gap:45px;align-items:start}
+.theme-supply-chain .focus-heading h2{font-size:clamp(2rem,3vw,3rem);word-break:keep-all}
+.theme-supply-chain .focus-heading p{color:#51657d}
+.theme-supply-chain .focus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:20px}
+.theme-supply-chain .focus-grid article{padding:32px;border:1px solid #dce5ec;border-radius:12px;background:linear-gradient(145deg,#fff,#f1f6fa)}
+.theme-supply-chain .focus-symbol{display:block;color:#377fa6;font-size:5rem;line-height:1.4;margin-bottom:24px}
+.theme-supply-chain .focus-grid p{color:#51657d;margin-bottom:0}
+.theme-supply-chain .conference-section{padding:55px 6vw;border-color:#dce5ec}
+.theme-supply-chain .section-heading .eyebrow{color:#34718e}
+.theme-supply-chain .venue{background:#edf3f7;padding:55px 6vw}
+.theme-supply-chain .registration{background:#081625;padding:70px 6vw}
+.theme-supply-chain .registration .eyebrow{color:#91c7e7}
+.theme-supply-chain .conference-footer{background:#0d2033;color:#dce7f1;padding:32px 6vw}
+.theme-supply-chain .conference-footer p{color:#bacadc}
+.theme-supply-chain a:focus-visible{outline-color:#35b8d2}
+@media(max-width:1000px){.theme-supply-chain .hero{grid-template-columns:1fr}.theme-supply-chain .hero-copy{padding:60px 6vw 20px}.theme-supply-chain .hero h1{max-width:750px}.theme-supply-chain .hero-art{height:400px}.theme-supply-chain .focus-heading{grid-template-columns:1fr;gap:10px}.theme-supply-chain .focus-grid{gap:15px}.theme-supply-chain .focus-grid article{padding:22px}}
+@media(max-width:520px){.theme-supply-chain .hero-art{height:280px}.theme-supply-chain .focus-grid{grid-template-columns:1fr}.theme-supply-chain .focus-symbol{font-size:3rem;margin-bottom:12px}.theme-supply-chain .conference-nav nav{gap:18px}.theme-supply-chain .security-focus{padding:45px 6vw}.theme-supply-chain .hero h1{font-size:clamp(2.5rem,10vw,3.8rem)}}
+
+.theme-supply-chain .focus-symbol{height:160px;background-image:url('images/supply-chain-hero.webp');background-repeat:no-repeat;background-size:300% auto;border-radius:8px}
+.theme-supply-chain .focus-packages{background-position:0 48%}
+.theme-supply-chain .focus-models{background-position:50% 48%}
+.theme-supply-chain .focus-deploy{background-position:100% 48%}
