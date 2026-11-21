@@ -3,13 +3,12 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Events - Python Korea</title>
+  <title>행사 - Python Korea</title>
   
   <link rel="canonical" href="https://www.python.or.kr/events/page/2/">
   
@@ -36,123 +35,143 @@
 
 
 
+  <link rel="stylesheet" href="/static/pythonkr/site-navigation.css">
+  <script src="/static/pythonkr/site-navigation.js" defer></script>
+  <link rel="stylesheet" href="/static/pythonkr/community-pages.css">
 </head>
 <body class="bg-white min-h-screen flex flex-col">
-  <!-- 내비게이션 -->
-  <nav class="bg-white border-b">
-    <div class="container mx-auto px-4">
-      <div class="flex justify-between items-center py-4">
-        <!-- 로고 + 텍스트 타이틀 -->
-        <div class="flex flex-row items-center space-x-4 w-auto">
-          <a class="navbar-brand" href="/">
-            <img class="h-12 mx-auto md:mx-0" src="/static/pythonkr/pythonkr-badge.png" alt="Python Korea Logo"/>
-          </a>
-          <h1 class="text-xl font-bold text-gray-800 mt-2 md:mt-0 text-center md:text-left">
-            파이썬 한국 사용자 모임
-          </h1>
-        </div>
-        <!-- 내비게이션 -->
-        <div class="hidden md:flex space-x-4">
-          
-          <a class="text-gray-600 hover:text-gray-800" href="/about/">About</a>
-          
-          <a class="text-gray-600 hover:text-gray-800" href="/activity/">Activity</a>
-          
-          <a class="text-gray-600 hover:text-gray-800" href="/support/">Support</a>
-          
-          <a class="text-gray-600 hover:text-gray-800" href="/events/">Events</a>
-          
-        </div>
-        <!-- 모바일 메뉴 버튼 -->
-        <div class="md:hidden">
-          <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- 모바일 메뉴 -->
-    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+  <a class="site-skip-link" href="#main-content">본문 바로가기</a>
+  <header class="bg-white border-b">
+    <div class="site-header container mx-auto px-4 py-4">
+      <a class="site-brand" href="/">
+        <img src="/static/pythonkr/pythonkr-badge.png" width="48" height="48" alt="">
+        <span>파이썬 한국 사용자 모임</span>
+      </a>
       
-      <a class="block py-2 text-gray-600 hover:bg-gray-200" href="/about/">About</a>
       
-      <a class="block py-2 text-gray-600 hover:bg-gray-200" href="/activity/">Activity</a>
+      <nav class="site-nav" aria-label="주 메뉴">
+        <button class="site-menu-button" type="button" aria-controls="site-menu" aria-expanded="true" hidden>메뉴</button>
+        <ul id="site-menu" class="site-menu">
+          
+          <li><a href="/about/">About</a></li>
+          
+          <li><a href="/activity/">Activity</a></li>
+          
+          <li><a href="/support/">Support</a></li>
+          
+          <li><a href="/events/" aria-current="page">Events</a></li>
+          
+        </ul>
+      </nav>
       
-      <a class="block py-2 text-gray-600 hover:bg-gray-200" href="/support/">Support</a>
-      
-      <a class="block py-2 text-gray-600 hover:bg-gray-200" href="/events/">Events</a>
       
     </div>
-  </nav>
-
-  <!-- 메인 -->
-  <main class="flex-grow w-full max-w-7xl mx-auto px-4 py-8">
-    
-<div class="max-w-7xl mx-auto">
-  <!-- Page Header -->
-  <header class="mb-8">
-    <h1 class="text-4xl font-bold text-gray-900 mb-4">Events</h1>
-    
-    <div class="prose">
-      <p data-block-key="wgmnn">파이썬 사용자 모임에서 주최, 주관하거나 담당하는 이벤트들입니다.</p>
-    </div>
-    
   </header>
 
-  <!-- Events List -->
+  <!-- 메인 -->
+  <main id="main-content" tabindex="-1" class="flex-grow w-full max-w-7xl mx-auto px-4 py-8">
+    
+<div class="community-page events-page">
+<header class="community-header"><p class="community-eyebrow">PYTHON KOREA / EVENTS</p><h1>함께 만나고,<br>다음 이야기를 만듭니다.</h1><div class="header-bottom"><div class="community-lead"><p data-block-key="wgmnn">파이썬 사용자 모임에서 주최, 주관하거나 담당하는 이벤트들입니다.</p></div><span class="header-note">CONFERENCES · SYMPOSIUMS · MEETUPS</span></div></header>
+
+
+<section class="event-group" aria-labelledby="past-heading">
+  <div class="group-heading"><h2 id="past-heading">지난 행사와 기록</h2><span>함께 쌓아 온 경험</span></div>
+  <div class="event-grid">
+    
+      
+        
+
+<article class="event-card">
   
-  <ul class="space-y-3">
-    
-    <li>
-      <a href="/events/pycon-korea-2017/" class="text-blue-600 hover:text-blue-800 hover:underline">
-        파이콘 한국 2017
-      </a>
-      
-      <p class="text-sm text-gray-600 mt-1">파이콘 한국 2017의 행사 개요와 후원사 기록</p>
-      
-    </li>
-    
-    <li>
-      <a href="/events/pycon-apac-2016/" class="text-blue-600 hover:text-blue-800 hover:underline">
-        파이콘 APAC 2016
-      </a>
-      
-      <p class="text-sm text-gray-600 mt-1">파이콘 APAC 2016의 행사 개요와 후원사 기록</p>
-      
-    </li>
-    
-    <li>
-      <a href="/events/pycon-korea-2015/" class="text-blue-600 hover:text-blue-800 hover:underline">
-        파이콘 한국 2015
-      </a>
-      
-      <p class="text-sm text-gray-600 mt-1">파이콘 한국 2015의 행사 개요와 후원사 기록</p>
-      
-    </li>
-    
-    <li>
-      <a href="/events/pycon-korea-2014/" class="text-blue-600 hover:text-blue-800 hover:underline">
-        파이콘 한국 2014
-      </a>
-      
-      <p class="text-sm text-gray-600 mt-1">국내 첫 파이콘. 2014년 8월 30일 숙명여자대학교에서 참가자 450명 이상과 함께 열린 파이썬 커뮤니티 컨퍼런스.</p>
-      
-    </li>
-    
-  </ul>
+    <div class="event-year" aria-hidden="true">2017<span>파이콘</span></div>
   
-  <nav aria-label="이벤트 페이지" class="flex items-center justify-center gap-4 mt-8">
+  <div class="event-copy">
+    <div class="card-meta">
+      <span class="type-badge">파이콘</span>
+      <span>지난 행사</span>
+    </div>
+    <h3><a href="/events/pycon-korea-2017/">파이콘 한국 2017</a></h3>
+    <p class="card-date">2017.08.12 · 서울 코엑스 그랜드볼룸</p>
+    <p class="card-summary">파이콘 한국 2017의 행사 개요와 후원사 기록</p>
     
-    <a href="/events/" rel="prev" class="text-blue-600 hover:underline">이전</a>
+  </div>
+</article>
+
+
+      
     
-    <span>2 / 2</span>
-    
-  </nav>
+      
+        
+
+<article class="event-card">
   
+    <div class="event-year" aria-hidden="true">2016<span>파이콘</span></div>
   
+  <div class="event-copy">
+    <div class="card-meta">
+      <span class="type-badge">파이콘</span>
+      <span>지난 행사</span>
+    </div>
+    <h3><a href="/events/pycon-apac-2016/">파이콘 APAC 2016</a></h3>
+    <p class="card-date">2016.08.13 · 서울 코엑스</p>
+    <p class="card-summary">파이콘 APAC 2016의 행사 개요와 후원사 기록</p>
+    
+  </div>
+</article>
+
+
+      
+    
+      
+        
+
+<article class="event-card">
+  
+    <div class="event-year" aria-hidden="true">2015<span>파이콘</span></div>
+  
+  <div class="event-copy">
+    <div class="card-meta">
+      <span class="type-badge">파이콘</span>
+      <span>지난 행사</span>
+    </div>
+    <h3><a href="/events/pycon-korea-2015/">파이콘 한국 2015</a></h3>
+    <p class="card-date">2015.08.29 · 서울 상암동 누리꿈스퀘어</p>
+    <p class="card-summary">파이콘 한국 2015의 행사 개요와 후원사 기록</p>
+    
+  </div>
+</article>
+
+
+      
+    
+      
+        
+
+<article class="event-card">
+  
+    <div class="event-year" aria-hidden="true">2014<span>파이콘</span></div>
+  
+  <div class="event-copy">
+    <div class="card-meta">
+      <span class="type-badge">파이콘</span>
+      <span>지난 행사</span>
+    </div>
+    <h3><a href="/events/pycon-korea-2014/">파이콘 한국 2014</a></h3>
+    <p class="card-date">2014.08.30 · 숙명여자대학교 창학관 젬마홀</p>
+    <p class="card-summary">국내 첫 파이콘. 2014년 8월 30일 숙명여자대학교에서 참가자 450명 이상과 함께 열린 파이썬 커뮤니티 컨퍼런스.</p>
+    
+  </div>
+</article>
+
+
+      
+    
+  </div>
+</section>
+
+
+<nav class="event-pagination" aria-label="이벤트 페이지"><a href="/events/" rel="prev">← 이전 기록</a><span>2 / 2</span></nav>
 </div>
 
   </main>
@@ -175,12 +194,5 @@
     </div>
   </footer>
 
-  <script>
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
 </body>
 </html>

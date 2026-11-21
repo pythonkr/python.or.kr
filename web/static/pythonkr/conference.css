@@ -3,6 +3,104 @@
 /* Registered conference themes */
 .conference.theme-poster .hero{display:block;background:#172136;color:white;position:relative;overflow:hidden}.conference.theme-poster .hero-copy{position:relative;z-index:1;padding:100px 8vw}.conference.theme-poster .hero h1{max-width:1050px;font-size:clamp(3rem,8vw,8rem)}.conference.theme-poster .hero .intro,.conference.theme-poster .event-meta{color:#dce5ff}.conference.theme-poster .hero .eyebrow{color:#a7baff}.conference.theme-poster .hero-art{height:240px;min-height:240px}.conference.theme-poster .conference-section{grid-template-columns:1fr;gap:20px}.conference.theme-schedule .hero{min-height:0;grid-template-columns:3fr 1fr}.conference.theme-schedule .hero-copy{padding:45px 5vw}.conference.theme-schedule .hero h1{font-size:clamp(2.5rem,4vw,4rem)}.conference.theme-schedule .hero-art{min-height:280px}.conference.theme-schedule .conference-section:has(.timetable){background:white;grid-template-columns:1fr;gap:20px}.conference.theme-schedule .session{padding:30px 0;grid-template-columns:160px 1fr}.conference.theme-schedule .session h3{font-size:1.5rem}@media(max-width:850px){.conference.theme-schedule .hero{grid-template-columns:1fr}.conference.theme-schedule .hero-art{display:none}.conference.theme-poster .hero-copy{padding:60px 5vw}.conference.theme-schedule .session{grid-template-columns:90px 1fr}}
 
-.conference .timetable-scroll{overflow-x:auto;max-width:100%;outline-offset:5px}.conference .timetable{width:100%;border-collapse:collapse;min-width:520px}.conference .timetable caption{text-align:left;font-weight:700;margin-bottom:15px}.conference .timetable th,.conference .timetable td{border:1px solid #dce1ec;padding:18px;vertical-align:top;text-align:left}.conference .timetable th{color:var(--accent);font-size:.85rem}.conference .timetable th:first-child{width:95px}.conference .session-detail summary{cursor:pointer;line-height:1.4;font-weight:700}.conference .session-detail .speaker-name{display:block;font-size:.85rem;color:#536078;font-weight:400;margin-top:8px}.conference .session-detail p{font-size:.9rem;margin-top:12px}.conference .session-detail+.session-detail{margin-top:20px}.conference .conference-footer .prose{margin:20px 0}.conference .conference-footer .prose p{margin-bottom:10px}
+.conference .timetable-scroll {
+  --timetable-time-column: 6rem;
+  max-inline-size: 100%;
+  overflow-x: auto;
+  outline-offset: 5px;
+}
 
-.conference .language-switch{display:inline-flex;gap:10px;border-left:1px solid #dce1ec;padding-left:16px;font-size:.8rem}.conference .language-switch [aria-current="page"]{font-weight:800;color:var(--accent)}
+.conference .timetable {
+  --timetable-border: #dce1ec;
+  inline-size: 100%;
+  min-inline-size: 32.5rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-block-start: 1px solid var(--timetable-border);
+  background: var(--timetable-background, white);
+}
+
+/* The section heading provides the same visible label outside the scroller. */
+.conference .timetable caption {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.conference .timetable :is(th, td) {
+  padding: 18px;
+  border-block-end: 1px solid var(--timetable-border);
+  border-inline-end: 1px solid var(--timetable-border);
+  vertical-align: top;
+  text-align: start;
+}
+
+.conference .timetable th {
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+.conference .timetable th:first-child {
+  inline-size: var(--timetable-time-column);
+  min-inline-size: var(--timetable-time-column);
+  border-inline-start: 1px solid var(--timetable-border);
+  white-space: nowrap;
+}
+
+@media (min-width: 22.5rem) {
+  .conference .timetable-scroll.has-sticky-time {
+    scroll-padding-inline-start: calc(var(--timetable-time-column) + 4px);
+  }
+
+  .conference .has-sticky-time .timetable th:first-child {
+    position: sticky;
+    inset-inline-start: 0;
+    z-index: 1;
+    background: var(--timetable-background, white);
+  }
+}
+
+.conference :is(.timetable-scroll, .session-detail summary):focus-visible {
+  outline: 3px solid #2855d9;
+  outline-offset: 3px;
+}
+
+.conference .session-detail summary {
+  cursor: pointer;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.conference .session-detail .speaker-name {
+  display: block;
+  margin-block-start: 8px;
+  color: #536078;
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.conference .session-detail p {
+  margin-block-start: 12px;
+  font-size: 0.9rem;
+}
+
+.conference .session-detail + .session-detail {
+  margin-block-start: 20px;
+}
+
+.conference .conference-footer .prose{margin:20px 0}.conference .conference-footer .prose p{margin-bottom:10px}
+
+.conference .language-switch{display:inline-flex;gap:10px;border-left:1px solid #dce1ec;padding-left:16px;font-size:.8rem}.conference .language-switch [aria-current="page"]{font-weight:800;color:var(--accent);text-decoration:underline;text-underline-offset:.2em}
+
+@media (max-width: 850px) {
+  .conference-nav nav {
+    padding: 4px;
+    scroll-padding-inline: 4px;
+  }
+
+  .conference-nav nav a:focus-visible {
+    outline-offset: 1px;
+  }
+}

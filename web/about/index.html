@@ -3,7 +3,6 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -36,62 +35,47 @@
 
 
 
+  <link rel="stylesheet" href="/static/pythonkr/site-navigation.css">
+  <script src="/static/pythonkr/site-navigation.js" defer></script>
+  
 </head>
 <body class="bg-white min-h-screen flex flex-col">
-  <!-- 내비게이션 -->
-  <nav class="bg-white border-b">
-    <div class="container mx-auto px-4">
-      <div class="flex justify-between items-center py-4">
-        <!-- 로고 + 텍스트 타이틀 -->
-        <div class="flex flex-row items-center space-x-4 w-auto">
-          <a class="navbar-brand" href="/">
-            <img class="h-12 mx-auto md:mx-0" src="/static/pythonkr/pythonkr-badge.png" alt="Python Korea Logo"/>
-          </a>
-          <h1 class="text-xl font-bold text-gray-800 mt-2 md:mt-0 text-center md:text-left">
-            파이썬 한국 사용자 모임
-          </h1>
-        </div>
-        <!-- 내비게이션 -->
-        <div class="hidden md:flex space-x-4">
-          
-          <a class="text-gray-600 hover:text-gray-800" href="/about/">About</a>
-          
-          <a class="text-gray-600 hover:text-gray-800" href="/activity/">Activity</a>
-          
-          <a class="text-gray-600 hover:text-gray-800" href="/support/">Support</a>
-          
-          <a class="text-gray-600 hover:text-gray-800" href="/events/">Events</a>
-          
-        </div>
-        <!-- 모바일 메뉴 버튼 -->
-        <div class="md:hidden">
-          <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- 모바일 메뉴 -->
-    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+  <a class="site-skip-link" href="#main-content">본문 바로가기</a>
+  <header class="bg-white border-b">
+    <div class="site-header container mx-auto px-4 py-4">
+      <a class="site-brand" href="/">
+        <img src="/static/pythonkr/pythonkr-badge.png" width="48" height="48" alt="">
+        <span>파이썬 한국 사용자 모임</span>
+      </a>
       
-      <a class="block py-2 text-gray-600 hover:bg-gray-200" href="/about/">About</a>
       
-      <a class="block py-2 text-gray-600 hover:bg-gray-200" href="/activity/">Activity</a>
+      <nav class="site-nav" aria-label="주 메뉴">
+        <button class="site-menu-button" type="button" aria-controls="site-menu" aria-expanded="true" hidden>메뉴</button>
+        <ul id="site-menu" class="site-menu">
+          
+          <li><a href="/about/" aria-current="page">About</a></li>
+          
+          <li><a href="/activity/">Activity</a></li>
+          
+          <li><a href="/support/">Support</a></li>
+          
+          <li><a href="/events/">Events</a></li>
+          
+        </ul>
+      </nav>
       
-      <a class="block py-2 text-gray-600 hover:bg-gray-200" href="/support/">Support</a>
-      
-      <a class="block py-2 text-gray-600 hover:bg-gray-200" href="/events/">Events</a>
       
     </div>
-  </nav>
+  </header>
 
   <!-- 메인 -->
-  <main class="flex-grow w-full max-w-7xl mx-auto px-4 py-8">
+  <main id="main-content" tabindex="-1" class="flex-grow w-full max-w-7xl mx-auto px-4 py-8">
     
-    <div class="prose mx-auto"><p data-block-key="eji5d">파이썬 한국 사용자모임은 한국에서 파이썬을 사용하는 국내 커뮤니티에 도움을 주고 학습을 촉진하며 세계 각지의 파이썬 재단 및 커뮤니티와 협력하여 홍보, 보호 및 발전을 목표로 합니다.</p><h3 data-block-key="ce56e"><b>목적사업</b></h3><ol><li data-block-key="d504q">국내에서 열리는 파이썬 사용자들을 위한 파이콘 컨퍼런스 주관 및 운영</li><li data-block-key="49fri">개인, 단체 혹은 기업의 파이썬 관련행사, 홍보, 교육과정 및 컨퍼런스 주관 및 대행</li><li data-block-key="6i9on">파이썬 사용을 장려하기 위한 매체 홍보 및 사용 예를 홍보하는 사업</li><li data-block-key="80pbb">국내 파이썬 사용자들의 모임을 장려하기 위한 파이썬 개발자 모임을 지원하는 활동</li><li data-block-key="bem80">파이썬 자체의 개발을 위한 모임인 파이썬 스프린트를 수행하여 파이썬 개발 및 운영환경을 개선하기 위한 활동</li><li data-block-key="bc8el">세계 각지의 파이썬 재단 및 커뮤니티와 합력하기 위해 방문, 교류와 협력을 하기 위한 활동</li></ol><h3 data-block-key="do9o9"><b>이메일</b></h3><ul><li data-block-key="4iisi">후원 | <a href="mailto:sponsor@pycon.kr">sponsor@pycon.kr</a></li><li data-block-key="b2ssi">언론보도 및 취재문의 | <a href="mailto:press@pycon.kr">press@pycon.kr</a></li><li data-block-key="7ca7p">기타 문의 | <a href="mailto:office@pycon.kr">office@pycon.kr</a></li></ul></div>
+    <div class="prose mx-auto">
+  <h1>About</h1>
+  <p data-block-key="eji5d">파이썬 한국 사용자모임은 한국에서 파이썬을 사용하는 국내 커뮤니티에 도움을 주고 학습을 촉진하며 세계 각지의 파이썬 재단 및 커뮤니티와 협력하여 홍보, 보호 및 발전을 목표로 합니다.</p><h3 data-block-key="ce56e"><b>목적사업</b></h3><ol><li data-block-key="d504q">국내에서 열리는 파이썬 사용자들을 위한 파이콘 컨퍼런스 주관 및 운영</li><li data-block-key="49fri">개인, 단체 혹은 기업의 파이썬 관련행사, 홍보, 교육과정 및 컨퍼런스 주관 및 대행</li><li data-block-key="6i9on">파이썬 사용을 장려하기 위한 매체 홍보 및 사용 예를 홍보하는 사업</li><li data-block-key="80pbb">국내 파이썬 사용자들의 모임을 장려하기 위한 파이썬 개발자 모임을 지원하는 활동</li><li data-block-key="bem80">파이썬 자체의 개발을 위한 모임인 파이썬 스프린트를 수행하여 파이썬 개발 및 운영환경을 개선하기 위한 활동</li><li data-block-key="bc8el">세계 각지의 파이썬 재단 및 커뮤니티와 합력하기 위해 방문, 교류와 협력을 하기 위한 활동</li></ol><h3 data-block-key="do9o9"><b>이메일</b></h3><ul><li data-block-key="4iisi">후원 | <a href="mailto:sponsor@pycon.kr">sponsor@pycon.kr</a></li><li data-block-key="b2ssi">언론보도 및 취재문의 | <a href="mailto:press@pycon.kr">press@pycon.kr</a></li><li data-block-key="7ca7p">기타 문의 | <a href="mailto:office@pycon.kr">office@pycon.kr</a></li></ul>
+</div>
+
     
   </main>
 
@@ -113,12 +97,5 @@
     </div>
   </footer>
 
-  <script>
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
 </body>
 </html>

@@ -1,0 +1,83 @@
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  color: #374151;
+}
+
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.site-brand img {
+  flex: none;
+}
+
+.site-nav {
+  flex: 1 1 100%;
+}
+
+.site-menu:not([hidden]) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-menu li {
+  max-inline-size: 100%;
+}
+
+.site-menu a {
+  display: block;
+  padding: 0.5rem;
+  overflow-wrap: anywhere;
+}
+
+.site-header a:is(:hover, [aria-current="page"]) {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.site-menu-button {
+  margin-block-end: 0.25rem;
+  border: 1px solid currentColor;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+.site-skip-link {
+  position: absolute;
+  inset-block-start: 0.5rem;
+  inset-inline-start: 0.5rem;
+  z-index: 10;
+  padding: 0.5rem 0.75rem;
+  background: white;
+  color: #172136;
+}
+
+.site-skip-link:not(:focus) {
+  clip-path: inset(50%);
+}
+
+.site-header :is(a, button):focus-visible,
+.site-skip-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+@media (min-width: 48rem) {
+  .site-nav {
+    flex: 0 1 auto;
+  }
+}

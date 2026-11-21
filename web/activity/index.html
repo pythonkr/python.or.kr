@@ -3,13 +3,12 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Activity - Python Korea</title>
+  <title>활동 - Python Korea</title>
   
   <link rel="canonical" href="https://www.python.or.kr/activity/">
   
@@ -36,63 +35,47 @@
 
 
 
+  <link rel="stylesheet" href="/static/pythonkr/site-navigation.css">
+  <script src="/static/pythonkr/site-navigation.js" defer></script>
+  <link rel="stylesheet" href="/static/pythonkr/community-pages.css">
 </head>
 <body class="bg-white min-h-screen flex flex-col">
-  <!-- 내비게이션 -->
-  <nav class="bg-white border-b">
-    <div class="container mx-auto px-4">
-      <div class="flex justify-between items-center py-4">
-        <!-- 로고 + 텍스트 타이틀 -->
-        <div class="flex flex-row items-center space-x-4 w-auto">
-          <a class="navbar-brand" href="/">
-            <img class="h-12 mx-auto md:mx-0" src="/static/pythonkr/pythonkr-badge.png" alt="Python Korea Logo"/>
-          </a>
-          <h1 class="text-xl font-bold text-gray-800 mt-2 md:mt-0 text-center md:text-left">
-            파이썬 한국 사용자 모임
-          </h1>
-        </div>
-        <!-- 내비게이션 -->
-        <div class="hidden md:flex space-x-4">
-          
-          <a class="text-gray-600 hover:text-gray-800" href="/about/">About</a>
-          
-          <a class="text-gray-600 hover:text-gray-800" href="/activity/">Activity</a>
-          
-          <a class="text-gray-600 hover:text-gray-800" href="/support/">Support</a>
-          
-          <a class="text-gray-600 hover:text-gray-800" href="/events/">Events</a>
-          
-        </div>
-        <!-- 모바일 메뉴 버튼 -->
-        <div class="md:hidden">
-          <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- 모바일 메뉴 -->
-    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+  <a class="site-skip-link" href="#main-content">본문 바로가기</a>
+  <header class="bg-white border-b">
+    <div class="site-header container mx-auto px-4 py-4">
+      <a class="site-brand" href="/">
+        <img src="/static/pythonkr/pythonkr-badge.png" width="48" height="48" alt="">
+        <span>파이썬 한국 사용자 모임</span>
+      </a>
       
-      <a class="block py-2 text-gray-600 hover:bg-gray-200" href="/about/">About</a>
       
-      <a class="block py-2 text-gray-600 hover:bg-gray-200" href="/activity/">Activity</a>
+      <nav class="site-nav" aria-label="주 메뉴">
+        <button class="site-menu-button" type="button" aria-controls="site-menu" aria-expanded="true" hidden>메뉴</button>
+        <ul id="site-menu" class="site-menu">
+          
+          <li><a href="/about/">About</a></li>
+          
+          <li><a href="/activity/" aria-current="page">Activity</a></li>
+          
+          <li><a href="/support/">Support</a></li>
+          
+          <li><a href="/events/">Events</a></li>
+          
+        </ul>
+      </nav>
       
-      <a class="block py-2 text-gray-600 hover:bg-gray-200" href="/support/">Support</a>
-      
-      <a class="block py-2 text-gray-600 hover:bg-gray-200" href="/events/">Events</a>
       
     </div>
-  </nav>
+  </header>
 
   <!-- 메인 -->
-  <main class="flex-grow w-full max-w-7xl mx-auto px-4 py-8">
+  <main id="main-content" tabindex="-1" class="flex-grow w-full max-w-7xl mx-auto px-4 py-8">
     
-    <div class="prose mx-auto"><h2 data-block-key="th8h5"><b>활동내역</b></h2><h3 data-block-key="ueace"><b>파이콘</b></h3><p data-block-key="xj4il">파이콘은 세계 각국의 파이썬 프로그래밍 언어 커뮤니티에서 주관하는 비영리 컨퍼런스입니다.</p><p data-block-key="itk1j">한국에서는 처음으로 열린 파이콘 한국 2014를 시작으로 파이콘 한국 준비위원회는 건강한 국내 파이썬 생태계에 지속적인 보탬이 되고자, 커뮤니티 멤버들의 자발적인 봉사로 운영되고 있습니다. 2016년에는 아시아·태평양 지역 파이썬 사용자들과 함께하는 파이콘 APAC으로 개최했습니다. 역대 행사 홈페이지에서 발표와 프로그램 등 행사 정보를 확인할 수 있습니다.</p><ul><li data-block-key="4g2q9"><a href="https://2026.pycon.kr/">파이콘 한국 2026</a></li><li data-block-key="hwnro"><a href="https://2025.pycon.kr/">파이콘 한국 2025</a></li><li data-block-key="fpsu8"><a href="https://2024.pycon.kr/">파이콘 한국 2024</a></li><li data-block-key="vfr9l"><a href="https://2023.pycon.kr/">파이콘 한국 2023</a></li><li data-block-key="wiwwq"><a href="https://2022.pycon.kr/">파이콘 한국 2022</a></li><li data-block-key="sbn63"><a href="https://2021.pycon.kr/">파이콘 한국 2021</a></li><li data-block-key="9tqfs"><a href="https://2020.pycon.kr/2020/">파이콘 한국 2020</a></li><li data-block-key="b9z5i"><a href="https://2019.pycon.kr/">파이콘 한국 2019</a></li><li data-block-key="xb3gf"><a href="https://2018.pycon.kr/">파이콘 한국 2018</a></li><li data-block-key="9xpry"><a href="https://2017.pycon.kr/">파이콘 한국 2017</a></li><li data-block-key="ynwwu"><a href="https://2016.pycon.kr/">파이콘 APAC 2016</a></li><li data-block-key="8h8nf"><a href="https://2015.pycon.kr/2015/">파이콘 한국 2015</a></li><li data-block-key="isqor"><a href="https://2014.pycon.kr/">파이콘 한국 2014</a></li></ul><h3 data-block-key="v31y4"><b>심포지움</b></h3><p data-block-key="ew8hq">파이썬과 관련 기술의 활용 경험을 공유하는 심포지움입니다. PyAI Symposium에서는 인공지능 기술과 실제 적용 사례를, PyWeb Symposium에서는 파이썬 웹·백엔드 개발 기술과 실무 경험을 다룹니다.</p><ul><li data-block-key="q26ky"><a href="/events/pyai-symposium-2025/">PyAI Symposium 2025</a></li><li data-block-key="a0yve"><a href="/events/pyweb-symposium-2024/">PyWeb Symposium 2024</a> · <a href="https://pyweb.python.or.kr/">행사 홈페이지</a></li></ul><h3 data-block-key="01w4u"><b>파이콘 부산</b></h3><p data-block-key="a9b64">부산에서 열리는 파이콘 행사입니다. 행사 홈페이지에서 프로그램과 참가 안내를 확인할 수 있습니다.</p><ul><li data-block-key="twdk7"><a href="https://busan.pycon.kr/2026/">파이콘 부산 2026</a></li></ul><h3 data-block-key="e5vm2"><b>분기(격월) 세미나</b></h3><p data-block-key="ll3zb">국내 파이썬 사용자들의 모임을 장려하고 지식을 공유하는 자리를 만들기 위해 마련한 세미나 입니다. 분기(격월) 세미나로 진행되며 일정 및 발표자 모집 정보는 아래 링크를 통해 확인할 수 있습니다.</p><ul><li data-block-key="2otr9"><a href="http://onoffmix.com/event/85393">2016.12 격월 세미나 &amp; 송년회</a></li><li data-block-key="qu7ma"><a href="http://onoffmix.com/event/81168">2016.10 격월 세미나</a></li></ul></div>
-    
+<div class="community-page activity-page"><header class="community-header"><p class="community-eyebrow">PYTHON KOREA / ACTIVITY</p><h1>파이썬으로 연결되는<br>사람과 경험.</h1><div class="header-bottom"><p class="community-lead">컨퍼런스부터 작은 만남까지.<br>함께 배우고 나누며 파이썬 생태계를 만들어갑니다.</p><span class="header-note">LEARN. SHARE. CONNECT.</span></div></header>
+<nav class="activity-overview" aria-label="활동 바로가기"><a href="#pycon"><span class="activity-number">01</span><span class="community-eyebrow">PYCON KOREA</span><strong>파이콘</strong><span class="overview-arrow" aria-hidden="true">↘</span></a><a href="#symposium"><span class="activity-number">02</span><span class="community-eyebrow">SYMPOSIUM</span><strong>심포지움</strong><span class="overview-arrow" aria-hidden="true">↘</span></a><a href="#busan"><span class="activity-number">03</span><span class="community-eyebrow">LOCAL COMMUNITY</span><strong>파이콘 부산</strong><span class="overview-arrow" aria-hidden="true">↘</span></a><a href="#seminar"><span class="activity-number">04</span><span class="community-eyebrow">MEET &amp; SHARE</span><strong>분기(격월) 세미나</strong><span class="overview-arrow" aria-hidden="true">↘</span></a></nav>
+<section class="activity-section" id="pycon"><div class="activity-heading"><p class="community-eyebrow">01 / PYCON KOREA</p><h2>파이콘</h2></div><div class="activity-body"><div class="activity-description"><p data-block-key="7vsdr">파이콘은 세계 각국의 파이썬 프로그래밍 언어 커뮤니티에서 주관하는 비영리 컨퍼런스입니다.</p><p data-block-key="gwj1f">한국에서는 처음으로 열린 파이콘 한국 2014를 시작으로 파이콘 한국 준비위원회는 건강한 국내 파이썬 생태계에 지속적인 보탬이 되고자, 커뮤니티 멤버들의 자발적인 봉사로 운영되고 있습니다. 2016년에는 아시아·태평양 지역 파이썬 사용자들과 함께하는 파이콘 APAC으로 개최했습니다. 역대 행사 홈페이지에서 발표와 프로그램 등 행사 정보를 확인할 수 있습니다.</p></div><div class="activity-links year-grid"><div class="activity-link-row"><a href="https://2026.pycon.kr/">파이콘 한국 2026<span aria-hidden="true">↗</span></a></div><div class="activity-link-row"><a href="https://2025.pycon.kr/">파이콘 한국 2025<span aria-hidden="true">↗</span></a></div><div class="activity-link-row"><a href="https://2024.pycon.kr/">파이콘 한국 2024<span aria-hidden="true">↗</span></a></div><div class="activity-link-row"><a href="https://2023.pycon.kr/">파이콘 한국 2023<span aria-hidden="true">↗</span></a></div><div class="activity-link-row"><a href="https://2022.pycon.kr/">파이콘 한국 2022<span aria-hidden="true">↗</span></a></div><div class="activity-link-row"><a href="https://2021.pycon.kr/">파이콘 한국 2021<span aria-hidden="true">↗</span></a></div><div class="activity-link-row"><a href="https://2020.pycon.kr/2020/">파이콘 한국 2020<span aria-hidden="true">↗</span></a></div><div class="activity-link-row"><a href="https://2019.pycon.kr/">파이콘 한국 2019<span aria-hidden="true">↗</span></a></div><div class="activity-link-row"><a href="https://2018.pycon.kr/">파이콘 한국 2018<span aria-hidden="true">↗</span></a></div><div class="activity-link-row"><a href="https://2017.pycon.kr/">파이콘 한국 2017<span aria-hidden="true">↗</span></a></div><div class="activity-link-row"><a href="https://2016.pycon.kr/">파이콘 APAC 2016<span aria-hidden="true">↗</span></a></div><div class="activity-link-row"><a href="https://2015.pycon.kr/2015/">파이콘 한국 2015<span aria-hidden="true">↗</span></a></div><div class="activity-link-row"><a href="https://2014.pycon.kr/">파이콘 한국 2014<span aria-hidden="true">↗</span></a></div></div></div></section><section class="activity-section" id="symposium"><div class="activity-heading"><p class="community-eyebrow">02 / SYMPOSIUM</p><h2>심포지움</h2></div><div class="activity-body"><div class="activity-description"><p data-block-key="fd3v6">파이썬과 관련 기술의 활용 경험을 공유하는 심포지움입니다. PyAI Symposium에서는 인공지능 기술과 실제 적용 사례를, PyWeb Symposium에서는 파이썬 웹·백엔드 개발 기술과 실무 경험을 다룹니다.</p></div><div class="activity-links"><div class="activity-link-row"><a href="/symposium/python-ai-supply-chain-security-2026/">파이썬 AI 공급망보안 심포지움 2026<span aria-hidden="true">→</span></a></div><div class="activity-link-row"><a href="/events/pyai-symposium-2025/">PyAI Symposium 2025<span aria-hidden="true">→</span></a></div><div class="activity-link-row"><a href="/events/pyweb-symposium-2024/">PyWeb Symposium 2024<span aria-hidden="true">→</span></a><a href="https://pyweb.python.or.kr/">행사 홈페이지<span aria-hidden="true">↗</span></a></div></div></div></section><section class="activity-section" id="busan"><div class="activity-heading"><p class="community-eyebrow">03 / LOCAL COMMUNITY</p><h2>파이콘 부산</h2></div><div class="activity-body"><div class="activity-description"><p data-block-key="ub6sx">부산에서 열리는 파이콘 행사입니다. 행사 홈페이지에서 프로그램과 참가 안내를 확인할 수 있습니다.</p></div><div class="activity-links"><div class="activity-link-row"><a href="https://busan.pycon.kr/2026/">파이콘 부산 2026<span aria-hidden="true">↗</span></a></div></div></div></section><section class="activity-section" id="seminar"><div class="activity-heading"><p class="community-eyebrow">04 / MEET &amp; SHARE</p><h2>분기(격월) 세미나</h2></div><div class="activity-body"><div class="activity-description"><p data-block-key="4doju">국내 파이썬 사용자들의 모임을 장려하고 지식을 공유하는 자리를 만들기 위해 마련한 세미나 입니다. 분기(격월) 세미나로 진행되며 일정 및 발표자 모집 정보는 아래 링크를 통해 확인할 수 있습니다.</p></div><div class="activity-links"><div class="activity-link-row"><span class="activity-record-label">2018.12.29 · 파이썬 연말 미니 컨퍼런스</span><a href="https://www.facebook.com/pyconkorea/posts/2226550497607157/">PyCon Korea 행사 안내<span aria-hidden="true">↗</span></a></div><div class="activity-link-row"><span class="activity-record-label">2018.05.26 · 파이썬 세미나 — 나의 파이썬 레시피</span><a href="https://blog.pycon.kr/2018/05/26/python-seminar/">발표자료<span aria-hidden="true">↗</span></a></div><div class="activity-link-row"><span class="activity-record-label">2018.03 · 파이썬 격월 세미나 — 어쩌다보니 체감상 계속 0년차.. (웹 개발자 편)</span><a href="https://onoffmix.com/event/129456">온오프믹스<span aria-hidden="true">↗</span></a></div><div class="activity-link-row"><span class="activity-record-label">2017.12.09 · 파이썬 세미나 — 나는 올해 얼마나 큰 꿈을 꾸었나</span><a href="https://onoffmix.com/event/120310">온오프믹스<span aria-hidden="true">↗</span></a><a href="https://blog.pycon.kr/2017/12/27/python-seminar/">발표자료·영상<span aria-hidden="true">↗</span></a></div><div class="activity-link-row"><span class="activity-record-label">2017.10.21 · 파이썬 세미나 — Python &amp; Data</span><a href="https://onoffmix.com/event/116021">온오프믹스<span aria-hidden="true">↗</span></a><a href="https://blog.pycon.kr/2017/10/21/python-seminar/">발표자료·영상<span aria-hidden="true">↗</span></a></div><div class="activity-link-row"><span class="activity-record-label">2017.05.27 · 제4회 파이썬 격월 세미나 — 성장</span><a href="https://onoffmix.com/event/99927">온오프믹스<span aria-hidden="true">↗</span></a><a href="https://blog.pycon.kr/2017/04/30/python-weekly-2017-17/">PyCon Korea 블로그<span aria-hidden="true">↗</span></a></div><div class="activity-link-row"><span class="activity-record-label">2017.03.25 · 제3회 파이썬 격월 세미나</span><a href="https://onoffmix.com/event/94442">온오프믹스<span aria-hidden="true">↗</span></a></div><div class="activity-link-row"><span class="activity-record-label">2016.12.17 · 제2회 파이썬 격월 세미나 &amp; 송년회</span><a href="https://onoffmix.com/event/85393">온오프믹스<span aria-hidden="true">↗</span></a><a href="https://blog.pycon.kr/2016/12/29/python-seminar-201612-review/">발표자료·후기<span aria-hidden="true">↗</span></a></div><div class="activity-link-row"><span class="activity-record-label">2016.10.22 · 파이썬 격월 세미나</span><a href="https://onoffmix.com/event/81168">온오프믹스<span aria-hidden="true">↗</span></a><a href="https://blog.pycon.kr/2016/10/18/python-seminar-201610/">PyCon Korea 블로그<span aria-hidden="true">↗</span></a></div><div class="activity-link-row"><span class="activity-record-label">2016.02 · 파이썬 격월 세미나</span></div><div class="activity-link-row"><span class="activity-record-label">2014.12 · 파이썬 격월 세미나</span></div></div></div></section>
+<aside class="activity-ending"><p>다음 만남에서 만나요.</p><a href="../events/">전체 행사 살펴보기 →</a></aside></div>
+
   </main>
 
   <!-- 푸터 -->
@@ -113,12 +96,5 @@
     </div>
   </footer>
 
-  <script>
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
 </body>
 </html>

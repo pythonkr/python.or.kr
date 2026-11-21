@@ -3,13 +3,12 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Events - Python Korea</title>
+  <title>행사 - Python Korea</title>
   
   <link rel="canonical" href="https://www.python.or.kr/events/">
   
@@ -36,195 +35,326 @@
 
 
 
+  <link rel="stylesheet" href="/static/pythonkr/site-navigation.css">
+  <script src="/static/pythonkr/site-navigation.js" defer></script>
+  <link rel="stylesheet" href="/static/pythonkr/community-pages.css">
 </head>
 <body class="bg-white min-h-screen flex flex-col">
-  <!-- 내비게이션 -->
-  <nav class="bg-white border-b">
-    <div class="container mx-auto px-4">
-      <div class="flex justify-between items-center py-4">
-        <!-- 로고 + 텍스트 타이틀 -->
-        <div class="flex flex-row items-center space-x-4 w-auto">
-          <a class="navbar-brand" href="/">
-            <img class="h-12 mx-auto md:mx-0" src="/static/pythonkr/pythonkr-badge.png" alt="Python Korea Logo"/>
-          </a>
-          <h1 class="text-xl font-bold text-gray-800 mt-2 md:mt-0 text-center md:text-left">
-            파이썬 한국 사용자 모임
-          </h1>
-        </div>
-        <!-- 내비게이션 -->
-        <div class="hidden md:flex space-x-4">
-          
-          <a class="text-gray-600 hover:text-gray-800" href="/about/">About</a>
-          
-          <a class="text-gray-600 hover:text-gray-800" href="/activity/">Activity</a>
-          
-          <a class="text-gray-600 hover:text-gray-800" href="/support/">Support</a>
-          
-          <a class="text-gray-600 hover:text-gray-800" href="/events/">Events</a>
-          
-        </div>
-        <!-- 모바일 메뉴 버튼 -->
-        <div class="md:hidden">
-          <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- 모바일 메뉴 -->
-    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+  <a class="site-skip-link" href="#main-content">본문 바로가기</a>
+  <header class="bg-white border-b">
+    <div class="site-header container mx-auto px-4 py-4">
+      <a class="site-brand" href="/">
+        <img src="/static/pythonkr/pythonkr-badge.png" width="48" height="48" alt="">
+        <span>파이썬 한국 사용자 모임</span>
+      </a>
       
-      <a class="block py-2 text-gray-600 hover:bg-gray-200" href="/about/">About</a>
       
-      <a class="block py-2 text-gray-600 hover:bg-gray-200" href="/activity/">Activity</a>
+      <nav class="site-nav" aria-label="주 메뉴">
+        <button class="site-menu-button" type="button" aria-controls="site-menu" aria-expanded="true" hidden>메뉴</button>
+        <ul id="site-menu" class="site-menu">
+          
+          <li><a href="/about/">About</a></li>
+          
+          <li><a href="/activity/">Activity</a></li>
+          
+          <li><a href="/support/">Support</a></li>
+          
+          <li><a href="/events/" aria-current="page">Events</a></li>
+          
+        </ul>
+      </nav>
       
-      <a class="block py-2 text-gray-600 hover:bg-gray-200" href="/support/">Support</a>
-      
-      <a class="block py-2 text-gray-600 hover:bg-gray-200" href="/events/">Events</a>
       
     </div>
-  </nav>
-
-  <!-- 메인 -->
-  <main class="flex-grow w-full max-w-7xl mx-auto px-4 py-8">
-    
-<div class="max-w-7xl mx-auto">
-  <!-- Page Header -->
-  <header class="mb-8">
-    <h1 class="text-4xl font-bold text-gray-900 mb-4">Events</h1>
-    
-    <div class="prose">
-      <p data-block-key="wgmnn">파이썬 사용자 모임에서 주최, 주관하거나 담당하는 이벤트들입니다.</p>
-    </div>
-    
   </header>
 
-  <!-- Events List -->
+  <!-- 메인 -->
+  <main id="main-content" tabindex="-1" class="flex-grow w-full max-w-7xl mx-auto px-4 py-8">
+    
+<div class="community-page events-page">
+<header class="community-header"><p class="community-eyebrow">PYTHON KOREA / EVENTS</p><h1>함께 만나고,<br>다음 이야기를 만듭니다.</h1><div class="header-bottom"><div class="community-lead"><p data-block-key="wgmnn">파이썬 사용자 모임에서 주최, 주관하거나 담당하는 이벤트들입니다.</p></div><span class="header-note">CONFERENCES · SYMPOSIUMS · MEETUPS</span></div></header>
+
+<section class="event-group" aria-labelledby="upcoming-heading">
+  <div class="group-heading"><h2 id="upcoming-heading">다가오는 행사</h2><span>새로운 만남을 준비하고 있습니다</span></div>
   
-  <ul class="space-y-3">
     
-    <li>
-      <a href="/symposium/python-ai-supply-chain-security-2026/" class="text-blue-600 hover:text-blue-800 hover:underline">
-        파이썬 AI 공급망보안 심포지움 2026
-      </a>
       
-      <p class="text-sm text-gray-600 mt-1">파이썬과 AI 시스템의 공급망 보안을 주제로 개발부터 배포·운영까지의 위험과 대응 경험을 공유하는 심포지움입니다.</p>
-      
-    </li>
-    
-    <li>
-      <a href="/events/pycon-korea-2026/" class="text-blue-600 hover:text-blue-800 hover:underline">
-        파이콘 한국 2026
-      </a>
-      
-      <p class="text-sm text-gray-600 mt-1">파이콘 한국 2026의 행사 개요와 후원사 기록</p>
-      
-    </li>
-    
-    <li>
-      <a href="/events/pyai-symposium-2025/" class="text-blue-600 hover:text-blue-800 hover:underline">
-        PyAI Symposium 2025
-      </a>
-      
-      <p class="text-sm text-gray-600 mt-1">PyAI Symposium 2025</p>
-      
-    </li>
-    
-    <li>
-      <a href="/events/pycon-korea-2025/" class="text-blue-600 hover:text-blue-800 hover:underline">
-        파이콘 한국 2025
-      </a>
-      
-      <p class="text-sm text-gray-600 mt-1">파이콘 한국 2025의 행사 개요와 후원사 기록</p>
-      
-    </li>
-    
-    <li>
-      <a href="/events/pycon-korea-2024/" class="text-blue-600 hover:text-blue-800 hover:underline">
-        파이콘 한국 2024
-      </a>
-      
-      <p class="text-sm text-gray-600 mt-1">파이콘 한국 2024의 행사 개요와 후원사 기록</p>
-      
-    </li>
-    
-    <li>
-      <a href="/events/pyweb-symposium-2024/" class="text-blue-600 hover:text-blue-800 hover:underline">
-        PyWeb Symposium 2024
-      </a>
-      
-      <p class="text-sm text-gray-600 mt-1">파이썬 웹·백엔드 개발자들이 최신 기술과 실무 경험을 공유한 심포지움입니다.</p>
-      
-    </li>
-    
-    <li>
-      <a href="/events/pycon-korea-2023/" class="text-blue-600 hover:text-blue-800 hover:underline">
-        파이콘 한국 2023
-      </a>
-      
-      <p class="text-sm text-gray-600 mt-1">파이콘 한국 2023의 행사 개요와 후원사 기록</p>
-      
-    </li>
-    
-    <li>
-      <a href="/events/pycon-korea-2022/" class="text-blue-600 hover:text-blue-800 hover:underline">
-        파이콘 한국 2022
-      </a>
-      
-      <p class="text-sm text-gray-600 mt-1">파이콘 한국 2022의 행사 개요와 후원사 기록</p>
-      
-    </li>
-    
-    <li>
-      <a href="/events/pycon-korea-2021/" class="text-blue-600 hover:text-blue-800 hover:underline">
-        파이콘 한국 2021
-      </a>
-      
-      <p class="text-sm text-gray-600 mt-1">파이콘 한국 2021의 행사 개요와 후원사 기록</p>
-      
-    </li>
-    
-    <li>
-      <a href="/events/pycon-korea-2020/" class="text-blue-600 hover:text-blue-800 hover:underline">
-        파이콘 한국 2020
-      </a>
-      
-      <p class="text-sm text-gray-600 mt-1">파이콘 한국 2020의 행사 개요와 후원사 기록</p>
-      
-    </li>
-    
-    <li>
-      <a href="/events/pycon-korea-2019/" class="text-blue-600 hover:text-blue-800 hover:underline">
-        파이콘 한국 2019
-      </a>
-      
-      <p class="text-sm text-gray-600 mt-1">파이콘 한국 2019의 행사 개요와 후원사 기록</p>
-      
-    </li>
-    
-    <li>
-      <a href="/events/pycon-korea-2018/" class="text-blue-600 hover:text-blue-800 hover:underline">
-        파이콘 한국 2018
-      </a>
-      
-      <p class="text-sm text-gray-600 mt-1">파이콘 한국 2018의 행사 개요와 후원사 기록</p>
-      
-    </li>
-    
-  </ul>
+
+<article class="event-card event-featured">
   
-  <nav aria-label="이벤트 페이지" class="flex items-center justify-center gap-4 mt-8">
-    
-    <span>1 / 2</span>
-    
-    <a href="/events/page/2/" rel="next" class="text-blue-600 hover:underline">다음</a>
-    
-  </nav>
+    <div class="event-art">
+      <img src="/static/pythonkr/images/supply-chain-hero.webp" alt="" width="1536" height="1024" loading="eager">
+    </div>
   
+  <div class="event-copy">
+    <div class="card-meta">
+      <span class="type-badge">심포지움</span>
+      <span class="upcoming-badge">예정</span>
+    </div>
+    <h3><a href="/symposium/python-ai-supply-chain-security-2026/">파이썬 AI 공급망보안 심포지움 2026</a></h3>
+    <p class="card-date">2026.12.09 · 장소 미정</p>
+    <p class="card-summary">파이썬과 AI 시스템의 공급망 보안을 주제로 개발부터 배포·운영까지의 위험과 대응 경험을 공유하는 심포지움입니다.</p>
+    <div class="card-bottom">등록 준비 중</div>
+  </div>
+</article>
+
+
+    
   
+</section>
+
+
+<section class="event-group" aria-labelledby="past-heading">
+  <div class="group-heading"><h2 id="past-heading">지난 행사와 기록</h2><span>함께 쌓아 온 경험</span></div>
+  <div class="event-grid">
+    
+      
+        
+
+<article class="event-card">
+  
+    <div class="event-year" aria-hidden="true">2026<span>파이콘</span></div>
+  
+  <div class="event-copy">
+    <div class="card-meta">
+      <span class="type-badge">파이콘</span>
+      <span>지난 행사</span>
+    </div>
+    <h3><a href="/events/pycon-korea-2026/">파이콘 한국 2026</a></h3>
+    <p class="card-date">2026.08.15 · 동국대학교 신공학관</p>
+    <p class="card-summary">파이콘 한국 2026의 행사 개요와 후원사 기록</p>
+    
+  </div>
+</article>
+
+
+      
+    
+      
+        
+
+<article class="event-card">
+  
+    <div class="event-year" aria-hidden="true">2025<span>심포지움</span></div>
+  
+  <div class="event-copy">
+    <div class="card-meta">
+      <span class="type-badge">심포지움</span>
+      <span>지난 행사</span>
+    </div>
+    <h3><a href="/events/pyai-symposium-2025/">PyAI Symposium 2025</a></h3>
+    <p class="card-date">2025.11.30 · 마이크로소프트 광화문 13층</p>
+    <p class="card-summary">PyAI Symposium 2025</p>
+    
+  </div>
+</article>
+
+
+      
+    
+      
+        
+
+<article class="event-card">
+  
+    <div class="event-year" aria-hidden="true">2025<span>파이콘</span></div>
+  
+  <div class="event-copy">
+    <div class="card-meta">
+      <span class="type-badge">파이콘</span>
+      <span>지난 행사</span>
+    </div>
+    <h3><a href="/events/pycon-korea-2025/">파이콘 한국 2025</a></h3>
+    <p class="card-date">2025.08.15 · 동국대학교 서울캠퍼스 신공학관</p>
+    <p class="card-summary">파이콘 한국 2025의 행사 개요와 후원사 기록</p>
+    
+  </div>
+</article>
+
+
+      
+    
+      
+        
+
+<article class="event-card">
+  
+    <div class="event-year" aria-hidden="true">2024<span>파이콘</span></div>
+  
+  <div class="event-copy">
+    <div class="card-meta">
+      <span class="type-badge">파이콘</span>
+      <span>지난 행사</span>
+    </div>
+    <h3><a href="/events/pycon-korea-2024/">파이콘 한국 2024</a></h3>
+    <p class="card-date">2024.10.26 · 수원컨벤션센터</p>
+    <p class="card-summary">파이콘 한국 2024의 행사 개요와 후원사 기록</p>
+    
+  </div>
+</article>
+
+
+      
+    
+      
+        
+
+<article class="event-card">
+  
+    <div class="event-year" aria-hidden="true">2024<span>심포지움</span></div>
+  
+  <div class="event-copy">
+    <div class="card-meta">
+      <span class="type-badge">심포지움</span>
+      <span>지난 행사</span>
+    </div>
+    <h3><a href="/events/pyweb-symposium-2024/">PyWeb Symposium 2024</a></h3>
+    <p class="card-date">2024.03.23 · 한국 마이크로소프트 13층</p>
+    <p class="card-summary">파이썬 웹·백엔드 개발자들이 최신 기술과 실무 경험을 공유한 심포지움입니다.</p>
+    
+  </div>
+</article>
+
+
+      
+    
+      
+        
+
+<article class="event-card">
+  
+    <div class="event-year" aria-hidden="true">2023<span>파이콘</span></div>
+  
+  <div class="event-copy">
+    <div class="card-meta">
+      <span class="type-badge">파이콘</span>
+      <span>지난 행사</span>
+    </div>
+    <h3><a href="/events/pycon-korea-2023/">파이콘 한국 2023</a></h3>
+    <p class="card-date">2023.08.11 · 서울 코엑스 그랜드볼룸·아셈볼룸</p>
+    <p class="card-summary">파이콘 한국 2023의 행사 개요와 후원사 기록</p>
+    
+  </div>
+</article>
+
+
+      
+    
+      
+        
+
+<article class="event-card">
+  
+    <div class="event-year" aria-hidden="true">2022<span>파이콘</span></div>
+  
+  <div class="event-copy">
+    <div class="card-meta">
+      <span class="type-badge">파이콘</span>
+      <span>지난 행사</span>
+    </div>
+    <h3><a href="/events/pycon-korea-2022/">파이콘 한국 2022</a></h3>
+    <p class="card-date">2022.10.01 · 서울 커뮤니티 하우스 마실 및 온라인</p>
+    <p class="card-summary">파이콘 한국 2022의 행사 개요와 후원사 기록</p>
+    
+  </div>
+</article>
+
+
+      
+    
+      
+        
+
+<article class="event-card">
+  
+    <div class="event-year" aria-hidden="true">2021<span>파이콘</span></div>
+  
+  <div class="event-copy">
+    <div class="card-meta">
+      <span class="type-badge">파이콘</span>
+      <span>지난 행사</span>
+    </div>
+    <h3><a href="/events/pycon-korea-2021/">파이콘 한국 2021</a></h3>
+    <p class="card-date">2021.10.02 · 온라인</p>
+    <p class="card-summary">파이콘 한국 2021의 행사 개요와 후원사 기록</p>
+    
+  </div>
+</article>
+
+
+      
+    
+      
+        
+
+<article class="event-card">
+  
+    <div class="event-year" aria-hidden="true">2020<span>파이콘</span></div>
+  
+  <div class="event-copy">
+    <div class="card-meta">
+      <span class="type-badge">파이콘</span>
+      <span>지난 행사</span>
+    </div>
+    <h3><a href="/events/pycon-korea-2020/">파이콘 한국 2020</a></h3>
+    <p class="card-date">2020.09.26 · 온라인</p>
+    <p class="card-summary">파이콘 한국 2020의 행사 개요와 후원사 기록</p>
+    
+  </div>
+</article>
+
+
+      
+    
+      
+        
+
+<article class="event-card">
+  
+    <div class="event-year" aria-hidden="true">2019<span>파이콘</span></div>
+  
+  <div class="event-copy">
+    <div class="card-meta">
+      <span class="type-badge">파이콘</span>
+      <span>지난 행사</span>
+    </div>
+    <h3><a href="/events/pycon-korea-2019/">파이콘 한국 2019</a></h3>
+    <p class="card-date">2019.08.15 · 서울 코엑스 그랜드볼룸</p>
+    <p class="card-summary">파이콘 한국 2019의 행사 개요와 후원사 기록</p>
+    
+  </div>
+</article>
+
+
+      
+    
+      
+        
+
+<article class="event-card">
+  
+    <div class="event-year" aria-hidden="true">2018<span>파이콘</span></div>
+  
+  <div class="event-copy">
+    <div class="card-meta">
+      <span class="type-badge">파이콘</span>
+      <span>지난 행사</span>
+    </div>
+    <h3><a href="/events/pycon-korea-2018/">파이콘 한국 2018</a></h3>
+    <p class="card-date">2018.08.15 · 서울 코엑스 그랜드볼룸</p>
+    <p class="card-summary">파이콘 한국 2018의 행사 개요와 후원사 기록</p>
+    
+  </div>
+</article>
+
+
+      
+    
+  </div>
+</section>
+
+
+<nav class="event-pagination" aria-label="이벤트 페이지"><span>1 / 2</span><a href="/events/page/2/" rel="next">다음 기록 →</a></nav>
 </div>
 
   </main>
@@ -247,12 +377,5 @@
     </div>
   </footer>
 
-  <script>
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
 </body>
 </html>
